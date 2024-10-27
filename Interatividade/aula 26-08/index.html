@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>evento onkeydown</p>
+    <input type="text" id="inputText">
+    <p id="demo"></p>
+
+    <input type="text" id="nome" onfocus="destacar()" onblur="desfocar()">
+    <br>
+    <br>
+    <input type="text" oninput="colocarMaiuscula(this)">
+    <br>
+    <br>
+    <select id="curso" onchange="mostraSelecao()">
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="Delfi">Delfi</option>
+        <option value="Kotlin">Kotlin</option>
+    </select>
+
+    <button id="botao">Inserir</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
