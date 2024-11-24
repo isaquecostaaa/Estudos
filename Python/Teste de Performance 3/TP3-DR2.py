@@ -30,10 +30,8 @@ def filtrar_maiores_idade(idades):
     """
     Cria um dicionário com pessoas maiores de idade a partir de um dicionário de idades.
 
-    Args:
         idades (dict): Dicionário com nomes como chaves e idades como valores.
 
-    Returns:
         dict: Dicionário contendo apenas pessoas com 18 anos ou mais.
     """
     return {pessoa: idade for pessoa, idade in idades.items() if idade >= 18}
@@ -49,12 +47,8 @@ def remover_palavras_indesejadas(frase, palavras_indesejadas):
     """
     Remove palavras indesejadas de uma string.
 
-    Args:
-        frase (str): String original.
-        palavras_indesejadas (list): Lista de palavras que devem ser removidas.
-
-    Returns:
-        str: String filtrada sem as palavras indesejadas.
+        frase: String original.
+        palavras_indesejadas: Lista de palavras que devem ser removidas.
     """
     palavras = frase.split()
     palavras_filtradas = [palavra for palavra in palavras if palavra not in palavras_indesejadas]
@@ -70,11 +64,7 @@ def alternar_maiusculo_minusculo(texto):
     """
     Alterna entre letras maiúsculas e minúsculas em uma string, começando com maiúscula.
 
-    Args:
-        texto (str): Texto original.
-
-    Returns:
-        str: Texto formatado com alternância de maiúsculas e minúsculas.
+        texto: Texto original.
     """
     novo_texto = ""
     for i, letra in enumerate(texto):
@@ -95,7 +85,7 @@ def identificar_unicos(listas):
     Retorna uma lista de elementos únicos a partir de uma lista de listas.
 
     Args:
-        listas (list): Lista contendo outras listas.
+        listas: Lista contendo outras listas.
 
     Returns:
         list: Lista de elementos únicos.
@@ -115,12 +105,8 @@ def intercalar_listas(primeira_lista, segunda_lista):
     """
     Intercala os elementos de duas listas em uma string.
 
-    Args:
-        primeira_lista (list): Primeira lista de palavras.
-        segunda_lista (list): Segunda lista de palavras.
-
     Returns:
-        str: String com palavras intercaladas e restantes.
+        String com palavras intercaladas e restantes.
     """
     intercalada = []
     max_len = max(len(primeira_lista), len(segunda_lista))
@@ -141,12 +127,11 @@ def verificar_tamanho(lista, minimo):
     """
     Separa uma lista de palavras em duas listas: palavras com comprimento menor ou igual a n e maior que n.
 
-    Args:
-        lista (list): Lista de palavras.
-        minimo (int): Comprimento mínimo de separação.
+        lista: Lista de palavras.
+        minimo: Comprimento mínimo de separação.
 
     Returns:
-        list: Lista contendo duas listas: palavras menores/iguais a n e palavras maiores que n.
+        Lista contendo duas listas: palavras menores/iguais a n e palavras maiores que n.
     """
     menores = []
     maiores = []
@@ -169,12 +154,11 @@ def inserir_palavra(lista, nova_palavra):
     Insere uma nova palavra em uma lista em uma posição definida pelo usuário.
     Se a lista tiver menos de 3 elementos, a palavra é adicionada automaticamente no final.
 
-    Args:
-        lista (list): Lista inicial de palavras.
-        nova_palavra (str): Palavra a ser inserida.
+        lista: Lista inicial de palavras.
+        nova_palavra: Palavra a ser inserida.
 
     Returns:
-        list: Lista atualizada com a nova palavra.
+        Lista atualizada com a nova palavra.
     """
     if len(lista) < 3:
         lista.append(nova_palavra)
@@ -205,12 +189,11 @@ def combinar_listas(lista1, lista2):
     """
     Combina duas listas de números em uma única lista usando extend
 
-    Args:
-        lista1 (list): Primeira lista de números.
-        lista2 (list): Segunda lista de números.
+        lista1: Primeira lista de números.
+        lista2: Segunda lista de números.
 
     Returns:
-        list: Lista combinada.
+        Lista combinada.
     """
     lista1.extend(lista2)
     return lista1
@@ -226,11 +209,10 @@ def remover_duplicatas(lista):
     """
     Remove todas as ocorrências de palavras duplicadas de uma lista, mantendo apenas a primeira ocorrência.
 
-    Args:
-        lista (list): Lista de palavras.
+        lista: Lista de palavras.
 
     Returns:
-        list: Lista sem duplicatas.
+        Lista sem duplicatas.
     """
     lista_unica = []
     for palavra in lista:
@@ -249,11 +231,10 @@ def gerenciar_compras(lista_compras):
     Remove o último item de uma lista de compras, simulando o cancelamento da última compra.
     Informa se a lista estiver vazia.
 
-    Args:
-        lista_compras (list): Lista de itens de compras.
+        lista_compras: Lista de itens de compras.
 
     Returns:
-        list: Lista atualizada de compras.
+        Lista atualizada de compras.
     """
     if lista_compras:
         removido = lista_compras.pop()
@@ -274,11 +255,7 @@ def manipular_string(string):
     """
     Exibe uma substring de uma string com base em índices fornecidos pelo usuário.
 
-    Args:
-        string (str): String original.
-
-    Returns:
-        None
+        string: String original.
     """
     print(f"String original: {string}")
     try:
@@ -301,11 +278,10 @@ def gerenciar_lista_compras(lista_compras):
     """
     Gerencia uma lista de compras com operações de adicionar, remover e encerrar.
 
-    Args:
-        lista_compras (list): Lista inicial de compras.
+        lista_compras: Lista inicial de compras.
 
     Returns:
-        list: Lista de compras atualizada após as operações.
+        Lista de compras atualizada após as operações.
     """
     while True:
         print("\nLista de compras atual:", lista_compras)
